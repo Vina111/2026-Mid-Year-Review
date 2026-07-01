@@ -246,6 +246,59 @@ section{position:relative}
   .kr-prog{grid-column:1 / 3;grid-row:3}
   .obj-title{font-size:1.08rem}
 }
+
+/* ===================== PROJECTS ===================== */
+.pgroup{margin-bottom:32px}
+.pgroup-head{display:flex;align-items:center;gap:12px;margin-bottom:13px}
+.pgroup-title{font-family:var(--cjk);font-weight:800;font-size:1.14rem}
+.pgroup-count{font-family:var(--mono);font-size:.72rem;font-weight:600;color:#fff;background:var(--red);padding:2px 10px;border-radius:20px}
+.pgroup-en{font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint);margin-left:auto}
+.ptable-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px}
+.ptable{width:100%;min-width:620px;border-collapse:collapse;font-size:.9rem}
+.ptable thead th{background:var(--ink);color:#F3EEE7;font-family:var(--mono);font-size:.67rem;font-weight:500;letter-spacing:.1em;text-transform:uppercase;text-align:left;padding:11px 15px;white-space:nowrap}
+.ptable tbody td{padding:11px 15px;border-top:1px solid var(--line);font-family:var(--cjk);color:var(--ink-soft);vertical-align:middle}
+.ptable tbody tr:nth-child(even){background:#FCFBF9}
+.ptable .c-no{font-family:var(--mono);color:var(--ink-faint);width:46px}
+.ptable .c-date{font-family:var(--mono);font-size:.8rem;color:var(--ink-faint);white-space:nowrap}
+.ptable .c-name{color:var(--ink);font-weight:600}
+.ptable .c-client{white-space:nowrap}
+.ind{display:inline-block;font-size:.8rem;color:var(--ink-soft);background:var(--paper);border:1px solid var(--line);padding:2px 9px;border-radius:5px;white-space:nowrap}
+.st-open{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.68rem;color:var(--red-deep);background:rgba(214,46,34,.10);padding:3px 10px;border-radius:20px;white-space:nowrap}
+.st-open::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--red)}
+.st-lost{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.68rem;color:var(--ink-faint);background:rgba(27,23,20,.05);padding:3px 10px;border-radius:20px;white-space:nowrap}
+.st-lost::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--ink-faint)}
+
+/* ===================== OKR COMPARISON ===================== */
+.okrc{border:1px solid var(--line);border-radius:9px;overflow:hidden;margin-bottom:20px;background:var(--surface)}
+.okrc-head{display:flex;align-items:center;gap:13px;padding:15px 22px;background:var(--paper);border-bottom:1px solid var(--line)}
+.okrc-badge{flex:0 0 auto;font-family:var(--display);font-weight:800;font-size:.9rem;color:#fff;background:var(--red);width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;letter-spacing:-.01em}
+.okrc-title{font-family:var(--cjk);font-weight:800;font-size:1.1rem}
+.okrc-dim{margin-left:auto;font-family:var(--mono);font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;color:var(--ink-faint)}
+.okrc-cols{display:grid;grid-template-columns:1fr 1fr}
+.okrc-goal{padding:19px 22px 21px;border-right:1px solid var(--line)}
+.okrc-actual{padding:19px 22px 21px;background:#FCFBF9}
+.okrc-collabel{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-faint);margin-bottom:14px;display:flex;align-items:center;gap:9px}
+.okrc-collabel::before{content:"";width:15px;height:2px;background:var(--red)}
+.krdef{padding:12px 0;border-top:1px dashed var(--line-2)}
+.krdef:first-of-type{border-top:none;padding-top:0}
+.krdef-h{display:flex;gap:9px;align-items:baseline;margin-bottom:6px}
+.krdef-tag{flex:0 0 auto;font-family:var(--mono);font-weight:600;color:var(--red);font-size:.76rem}
+.krdef-name{font-family:var(--cjk);font-weight:600;font-size:.93rem;color:var(--ink);line-height:1.45}
+.krdef-subs{list-style:none;margin:5px 0 0;padding:0}
+.krdef-subs li{position:relative;padding-left:15px;font-family:var(--cjk);font-size:.83rem;color:var(--ink-faint);line-height:1.55;margin-bottom:3px}
+.krdef-subs li::before{content:"";position:absolute;left:3px;top:.62em;width:4px;height:4px;border-radius:50%;background:var(--line-2)}
+.actual-item{padding:12px 0;border-top:1px dashed var(--line-2)}
+.actual-item:first-of-type{border-top:none;padding-top:0}
+.actual-top{display:flex;align-items:center;gap:10px;margin-bottom:6px}
+.actual-num{font-family:var(--mono);font-weight:600;color:var(--red);font-size:.8rem}
+.actual-body{font-family:var(--cjk);font-size:.9rem;color:var(--ink-soft);line-height:1.62}
+.actual-body b{color:var(--ink);font-weight:600}
+
+@media(max-width:760px){
+  .okrc-cols{grid-template-columns:1fr}
+  .okrc-goal{border-right:none;border-bottom:1px solid var(--line)}
+}
+
 @media print{.gauge-fill{stroke-dashoffset:0!important;transition:none!important}}
 @media(prefers-reduced-motion:reduce){.gauge-fill{stroke-dashoffset:0!important;transition:none!important}}
 
@@ -287,8 +340,7 @@ section{position:relative}
         </div>
         <h1 class="hero-head reveal" data-d="1">
           <span class="l"> 2026 <span class="cn-em">上半年</span></span>
-          <span class="l"><span class="arrow">→</span> 个人工作成果 </span></span><br>
-          <span class="own">述职汇报</span></span>
+          <span class="l"><span class="arrow">→</span> 个人工作成果 <span class="own">述职汇报</span></span>
         </h1>
         <p class="hero-sub reveal" data-d="2">
           上半年完成从「执行支持」到「独立负责」的阶段性跃迁——
@@ -323,12 +375,67 @@ section{position:relative}
   </div>
 </section>
 
-<!-- ===================== SHIFTS ===================== -->
+<!-- ===================== PROJECTS ===================== -->
 <section class="sec">
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-bar"></div>
       <div class="sec-num">02</div>
+      <div class="sec-titles">
+        <span class="eyebrow">Project portfolio · 项目概览</span>
+        <h2 class="sec-title">上半年项目全景</h2>
+      </div>
+    </div>
+    <p class="fwd-intro reveal">上半年共参与约 <b>22 个项目</b>：支持组内项目 12 · 独立负责项目 2 · 竞标 / BD 8，覆盖新能源、消费电子、AI、机械制造、半导体等领域。</p>
+
+    <div class="pgroup reveal" data-d="1">
+      <div class="pgroup-head"><span class="pgroup-title">支持组内项目</span><span class="pgroup-count">12</span><span class="pgroup-en">Team support</span></div>
+      <div class="ptable-wrap"><table class="ptable"><thead><tr><th>No.</th><th>项目时间</th><th>项目名称</th><th>客户名称</th><th>行业类型</th></tr></thead><tbody>
+      <tr><td class="c-no">1</td><td class="c-date">2026.01–</td><td class="c-name">TCL LinkedIn 运维</td><td class="c-client">TCL</td><td><span class="ind">消费电子</span></td></tr>
+<tr><td class="c-no">2</td><td class="c-date">2026.02</td><td class="c-name">英国危机专项（二阶段）</td><td class="c-client">临工重机</td><td><span class="ind">机械制造</span></td></tr>
+<tr><td class="c-no">3</td><td class="c-date">2026.02</td><td class="c-name">EverMind 海外传播</td><td class="c-client">EverMind</td><td><span class="ind">AI</span></td></tr>
+<tr><td class="c-no">4</td><td class="c-date">2026.03</td><td class="c-name">CONEXPO 海外传播</td><td class="c-client">临工集团</td><td><span class="ind">机械制造</span></td></tr>
+<tr><td class="c-no">5</td><td class="c-date">2026.03</td><td class="c-name">长飞海外传播</td><td class="c-client">长飞光纤</td><td><span class="ind">光通信</span></td></tr>
+<tr><td class="c-no">6</td><td class="c-date">2026.03</td><td class="c-name">扬杰海外传播</td><td class="c-client">扬杰科技</td><td><span class="ind">半导体</span></td></tr>
+<tr><td class="c-no">7</td><td class="c-date">2026.04</td><td class="c-name">GTC 现场支持及传播</td><td class="c-client">协鑫能科</td><td><span class="ind">新能源</span></td></tr>
+<tr><td class="c-no">8</td><td class="c-date">2026.05</td><td class="c-name">元戎海外传播</td><td class="c-client">元戎</td><td><span class="ind">智能驾驶</span></td></tr>
+<tr><td class="c-no">9</td><td class="c-date">2026.04–</td><td class="c-name">KNKA 空净 / 除湿机传播</td><td class="c-client">杨枫科技</td><td><span class="ind">消费电子</span></td></tr>
+<tr><td class="c-no">10</td><td class="c-date">2026.05</td><td class="c-name">坦桑尼亚绿色充电</td><td class="c-client">道通</td><td><span class="ind">新能源</span></td></tr>
+<tr><td class="c-no">11</td><td class="c-date">2026.05</td><td class="c-name">澳大利亚传播</td><td class="c-client">道通</td><td><span class="ind">新能源</span></td></tr>
+<tr><td class="c-no">12</td><td class="c-date">2026.06</td><td class="c-name">HLI 长寿科技传播</td><td class="c-client">HLI</td><td><span class="ind">长寿科技</span></td></tr>
+      </tbody></table></div>
+    </div>
+
+    <div class="pgroup reveal">
+      <div class="pgroup-head"><span class="pgroup-title">独立负责项目</span><span class="pgroup-count">2</span><span class="pgroup-en">Project owner</span></div>
+      <div class="ptable-wrap"><table class="ptable"><thead><tr><th>No.</th><th>项目时间</th><th>项目名称</th><th>客户名称</th><th>行业类型</th></tr></thead><tbody>
+      <tr><td class="c-no">1</td><td class="c-date">2026.01–02</td><td class="c-name">星空源储硅谷发布会</td><td class="c-client">ABOK</td><td><span class="ind">新能源</span></td></tr>
+<tr><td class="c-no">2</td><td class="c-date">2026.01–02</td><td class="c-name">悦齿创新传播</td><td class="c-client">悦齿</td><td><span class="ind">消费电子</span></td></tr>
+      </tbody></table></div>
+    </div>
+
+    <div class="pgroup reveal">
+      <div class="pgroup-head"><span class="pgroup-title">竞标 / BD 项目</span><span class="pgroup-count">8</span><span class="pgroup-en">Pitch &amp; BD</span></div>
+      <div class="ptable-wrap"><table class="ptable"><thead><tr><th>No.</th><th>项目时间</th><th>项目名称</th><th>客户名称</th><th>行业类型</th><th>状态</th></tr></thead><tbody>
+      <tr><td class="c-no">1</td><td class="c-date">2026.03</td><td class="c-name">Ampace 竞标</td><td class="c-client">Ampace（新能安）</td><td><span class="ind">新能源</span></td><td><span class="st-lost">竞标失败</span></td></tr>
+<tr><td class="c-no">2</td><td class="c-date">2026.03</td><td class="c-name">TCL 实业竞标</td><td class="c-client">TCL 实业</td><td><span class="ind">消费电子</span></td><td><span class="st-lost">已退标</span></td></tr>
+<tr><td class="c-no">3</td><td class="c-date">2026.04</td><td class="c-name">usmile 新品发布</td><td class="c-client">usmile</td><td><span class="ind">口腔护理</span></td><td><span class="st-open">洽谈中</span></td></tr>
+<tr><td class="c-no">4</td><td class="c-date">2026.04</td><td class="c-name">REPT 海外展会</td><td class="c-client">瑞浦兰钧</td><td><span class="ind">新能源</span></td><td><span class="st-open">洽谈中</span></td></tr>
+<tr><td class="c-no">5</td><td class="c-date">2026.05</td><td class="c-name">Bluetti 德国发布会 / IFA</td><td class="c-client">Bluetti</td><td><span class="ind">储能</span></td><td><span class="st-open">洽谈中</span></td></tr>
+<tr><td class="c-no">6</td><td class="c-date">2026.05</td><td class="c-name">ABOK IFA</td><td class="c-client">ABOK</td><td><span class="ind">新能源</span></td><td><span class="st-open">洽谈中</span></td></tr>
+<tr><td class="c-no">7</td><td class="c-date">2026.05</td><td class="c-name">MOMEWELL IFA</td><td class="c-client">MOMEWELL</td><td><span class="ind">健康科技</span></td><td><span class="st-open">洽谈中</span></td></tr>
+<tr><td class="c-no">8</td><td class="c-date">2026.06</td><td class="c-name">MINISO 2B Deck</td><td class="c-client">名创优品</td><td><span class="ind">零售</span></td><td><span class="st-open">洽谈中</span></td></tr>
+      </tbody></table></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SHIFTS ===================== -->
+<section class="sec">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <div class="sec-bar"></div>
+      <div class="sec-num">03</div>
       <div class="sec-titles">
         <span class="eyebrow">Six capability shifts</span>
         <h2 class="sec-title">六项能力跃迁</h2>
@@ -342,7 +449,7 @@ section{position:relative}
       </div>
       <div class="shift reveal" data-d="1">
         <div class="top"><span class="sn">02</span><span class="en">On the ground</span></div>
-        <h3>出差第一名🥇：线下项目支持</h3>
+        <h3>线下执行：跨城高强度现场</h3>
         <p>3 月 CONEXPO（拉斯维加斯）、4 月 GTC（圣何塞）、6 月纽约 GCS 与洛杉矶 NGO 项目——<b>可独立负责线下项目支持</b>。</p>
       </div>
       <div class="shift reveal">
@@ -374,7 +481,7 @@ section{position:relative}
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-bar"></div>
-      <div class="sec-num">03</div>
+      <div class="sec-num">04</div>
       <div class="sec-titles">
         <span class="eyebrow">Signature case · 代表项目</span>
         <h2 class="sec-title">临工集团亮相 CONEXPO 2026</h2>
@@ -399,7 +506,7 @@ section{position:relative}
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-bar"></div>
-      <div class="sec-num">04</div>
+      <div class="sec-num">05</div>
       <div class="sec-titles">
         <span class="eyebrow">Methodology · 方法沉淀</span>
         <h2 class="sec-title">把个人 AI 经验<br>沉淀为团队方法</h2>
@@ -431,7 +538,7 @@ section{position:relative}
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-bar"></div>
-      <div class="sec-num">05</div>
+      <div class="sec-num">06</div>
       <div class="sec-titles">
         <span class="eyebrow">Lived values · 价值观实践</span>
         <h2 class="sec-title">结果 · 互信 · 迭代</h2>
@@ -466,80 +573,84 @@ section{position:relative}
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-bar"></div>
-      <div class="sec-num">06</div>
+      <div class="sec-num">07</div>
       <div class="sec-titles">
-        <span class="eyebrow">Annual OKR · 年度目标</span>
-        <h2 class="sec-title">OKR 中期进展</h2>
+        <span class="eyebrow">Annual OKR · 目标 vs 完成</span>
+        <h2 class="sec-title">OKR 对比</h2>
       </div>
     </div>
+    <p class="fwd-intro reveal">年初制定 <b>4 个 Objective、12 项 KR</b>。左侧为年初设定的目标，右侧为上半年实际完成——个人 OKR 与王怡组不同，完成节奏亦不同。</p>
 
-    <p class="fwd-intro reveal">年初制定 <b>4 个 Objective、12 项 KR</b>。以下为各目标的中期进展。</p>
-
-    <!-- Fee highlight -->
     <div class="okr-fee reveal" data-d="1">
       <div class="fee-gauges">
-        <div class="gauge">
-          <svg viewBox="0 0 120 118" xmlns="http://www.w3.org/2000/svg" aria-label="Vina fee 6%">
-        <path class="g-track" d="M 26.77 93.23 A 47 47 0 1 1 93.23 93.23"/>
-        <path class="gauge-fill" d="M 26.77 93.23 A 47 47 0 0 1 18.81 82.64"/>
-        <text class="g-pct" x="60" y="60" text-anchor="middle" dominant-baseline="central">6%</text>
-      </svg>
-          <div class="gauge-name">Vina 个人 Fee</div>
-          <div class="gauge-amt">Current <b>$17,279</b><br>Goal $300,000</div>
+        <div class="gauge"><svg viewBox="0 0 120 118" xmlns="http://www.w3.org/2000/svg" aria-label="Vina fee 6%"><path class="g-track" d="M 26.77 93.23 A 47 47 0 1 1 93.23 93.23"/><path class="gauge-fill" d="M 26.77 93.23 A 47 47 0 0 1 18.81 82.64"/><text class="g-pct" x="60" y="60" text-anchor="middle" dominant-baseline="central">6%</text></svg><div class="gauge-name">Vina · 个人 Fee</div><div class="gauge-amt">Current <b>$17,279</b><br>Goal $300,000</div></div>
+        <div class="gauge"><svg viewBox="0 0 120 118" xmlns="http://www.w3.org/2000/svg" aria-label="Team fee 91%"><path class="g-track" d="M 26.77 93.23 A 47 47 0 1 1 93.23 93.23"/><path class="gauge-fill" d="M 26.77 93.23 A 47 47 0 1 1 103.97 76.61"/><text class="g-pct" x="60" y="60" text-anchor="middle" dominant-baseline="central">91%</text></svg><div class="gauge-name">王怡组</div><div class="gauge-amt">Current <b>$383,865</b><br>Goal $420,000</div></div>
+      </div>
+      <div class="fee-note"><span class="fee-tag">说明 · Context</span>
+        个人签约 Fee 完成 <b>6%</b>——一方面 <b>H1 为传播淡季</b>，签约与开票集中在下半年；另一方面上半年 <b>大部分产能投入王怡组项目支持</b>，组目标已完成 <b>91%</b>。下半年将把重心转向个人负责客户的签约与结算推进。
+      </div>
+    </div>
+
+    <div class="okrc reveal">
+      <div class="okrc-head"><span class="okrc-badge">O1</span><span class="okrc-title">财务维度</span><span class="okrc-dim">Financial</span></div>
+      <div class="okrc-cols">
+        <div class="okrc-goal"><div class="okrc-collabel">目标 · Goal</div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR1</span><span class="krdef-name">个人负责客户年度签约 Fee ≥ $300K</span></div><ul class="krdef-subs"><li>倒推开票金额 450–500K</li></ul></div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR2</span><span class="krdef-name">Fee 占比 ≥ 60%（倒推开票金额）</span></div><ul class="krdef-subs"><li>降低第三方成本、尽量成本内化（合理降低 Paid Article、临时外部支援、活动 / 物料成本）</li><li>报价单调整与 fine-tune，管理客户预期、做好成本预估，推进 Leads 转化</li></ul></div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR3</span><span class="krdef-name">人效 ≥ 4（Fee / 人工成本）</span></div><ul class="krdef-subs"><li>提升 research 效率降低人力成本</li><li>科技（或某垂类）记者 / KOL 深度建联，为未来邀约 / pitch 铺垫</li></ul></div>
         </div>
-        <div class="gauge">
-          <svg viewBox="0 0 120 118" xmlns="http://www.w3.org/2000/svg" aria-label="Team fee 91%">
-        <path class="g-track" d="M 26.77 93.23 A 47 47 0 1 1 93.23 93.23"/>
-        <path class="gauge-fill" d="M 26.77 93.23 A 47 47 0 1 1 103.97 76.61"/>
-        <text class="g-pct" x="60" y="60" text-anchor="middle" dominant-baseline="central">91%</text>
-      </svg>
-          <div class="gauge-name">Wang Yi Fee</div>
-          <div class="gauge-amt">Current <b>$383,865</b><br>Goal $420,000</div>
+        <div class="okrc-actual"><div class="okrc-collabel">完成情况 · H1 Actual</div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip prog">进行中</span></div><div class="actual-body">个人签约 Fee <b>$17,279</b>（<b>6%</b>）；H1 淡季 + 产能投入王怡组（组目标 <b>91%</b>），签约集中下半年。</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip prog">进行中</span></div><div class="actual-body">控制 Paid Article、临时外部支援与活动物料成本，推动成本内化与报价 fine-tune。</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip prog">进行中</span></div><div class="actual-body">以 AI 辅助 Research 提效降本；深化科技垂类记者 / KOL 建联（见 O4）。</div></div>
         </div>
       </div>
-      <div class="fee-note">
-        <span class="fee-tag">说明 · Context</span>
-        个人签约 Fee 完成 <b>6%</b>—上半年大部分产能投入 Wang Yi 组项目支持，组目标已完成 <b>91%</b>。下半年将着重关注个人负责客户的签约与结算推进，同时支持小组业务。
+    </div>
+    <div class="okrc reveal" data-d="1">
+      <div class="okrc-head"><span class="okrc-badge">O2</span><span class="okrc-title">客户维度</span><span class="okrc-dim">Client</span></div>
+      <div class="okrc-cols">
+        <div class="okrc-goal"><div class="okrc-collabel">目标 · Goal</div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR1</span><span class="krdef-name">个人 Leads → 成交转化率 ≥ 20%</span></div><ul class="krdef-subs"><li>Leads 被分配即算，转化 = 签合同</li><li>所有 Leads 24h 内首轮沟通 + 一次需求澄清</li><li>每季度整理转化 / 未转化清单，分类未转化原因并复盘</li></ul></div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR2</span><span class="krdef-name">个人负责项目结算完成率 ≥ 90%</span></div><ul class="krdef-subs"><li>服务期内项目节点管理，每周总结与下阶段进展</li><li>结束后 2 周内完成复盘与核销单确认，推进结算</li></ul></div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR3</span><span class="krdef-name">复购率（当年新签 3 / 老客激活 2）</span></div><ul class="krdef-subs"><li>每季度对存量客户 ≥ 1 次非项目沟通，记录新需求 / 预算周期</li><li>每季度推进 ≥ 2 个客户复购，整理机会点并同步上级</li></ul></div>
+        </div>
+        <div class="okrc-actual"><div class="okrc-collabel">完成情况 · H1 Actual</div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip prog">进行中</span></div><div class="actual-body">在洽 Leads 多在洽谈中；确认流失 <b>2 例</b>（Ampace 竞标失败、TCL 实业退标）；分配 Leads 均 <b>24h</b> 内首轮沟通。转化率待 pipeline 落地结算。</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip prog">进行中</span></div><div class="actual-body">按服务期节点推进项目复盘与核销单确认，随结算周期更新。</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip prog">进行中</span></div><div class="actual-body">持续推进存量客户非项目沟通，识别复购信号与预算周期。</div></div>
+        </div>
       </div>
     </div>
-
-    <!-- Objectives -->
-    <div class="obj reveal">
-      <div class="obj-head"><span class="obj-badge">O1</span><span class="obj-title">财务维度</span><span class="obj-dim">Financial</span></div>
-      <div class="krs">
-        <div class="kr"><span class="kr-tag">KR1</span><span class="kr-target">个人年度签约 Fee ≥ $300K</span><span class="kr-status"><span class="chip prog">进行中</span></span><span class="kr-prog">个人已签约 $17,279（6%）,上半年为签约淡季且较多精力投入组项目支持，组目标已达 91%（见上）。</span></div>
-        <div class="kr"><span class="kr-tag">KR2</span><span class="kr-target">Fee 占比 ≥ 60% · 成本内化</span><span class="kr-status"><span class="chip prog">进行中</span></span><span class="kr-prog">控制 Paid Article、临时外部支援与活动物料成本，推动成本内化与报价 fine-tune。</span></div>
-        <div class="kr"><span class="kr-tag">KR3</span><span class="kr-target">人效 ≥ 4（Fee / 人工成本）</span><span class="kr-status"><span class="chip prog">进行中</span></span><span class="kr-prog">以 AI 辅助 Research 提效降本（见方法沉淀）；深化科技垂类记者 / KOL 建联。</span></div>
+    <div class="okrc reveal">
+      <div class="okrc-head"><span class="okrc-badge">O3</span><span class="okrc-title">内部业务流程</span><span class="okrc-dim">Process</span></div>
+      <div class="okrc-cols">
+        <div class="okrc-goal"><div class="okrc-collabel">目标 · Goal</div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR1</span><span class="krdef-name">（以业务小组为单位）行业 Practice Deck 案例 × 3</span></div><ul class="krdef-subs"><li>全年输出 3 个项目案例（背景 / 策略 / 执行 / 结果）并入库</li><li>可能覆盖：女性成长、疗愈领域；展会传播案例等</li></ul></div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR2</span><span class="krdef-name">参与 ≥ 2 个新 Practice 从 0-1 的 research / 方法论沉淀</span></div><ul class="krdef-subs"><li>每季度参与 2 个行业媒体库 / 资源 / 洞察 / 传播攻略的整理更新</li></ul></div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR3</span><span class="krdef-name">落地 ≥ 1 个工具 / 流程优化并量化节省</span></div><ul class="krdef-subs"><li>探索 Research 与媒体监测自动化、常态化（形成完整 SOP）</li><li>探索 AI Agent 提升日常效率、简化工作流程</li></ul></div>
+        </div>
+        <div class="okrc-actual"><div class="okrc-collabel">完成情况 · H1 Actual</div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip done">1 / 3</span></div><div class="actual-body">拉展（CONEXPO）案例<b>已沉淀</b>；道通坦桑尼亚 / 澳大利亚项目总结进行中。</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip partial">部分达成</span></div><div class="actual-body">AI 项目突破<b>校报 + 开发者社群</b>传播渠道；临工项目沉淀<b>建筑类 + 工程类</b>行业媒体库。</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip prog">进行中</span></div><div class="actual-body">AI 辅助 Research 基础 SOP 成型并完成 <b>NotebookLM 内部分享</b>；持续探索 Research / 媒体监测自动化。</div></div>
+        </div>
       </div>
     </div>
-
-    <div class="obj reveal">
-      <div class="obj-head"><span class="obj-badge">O2</span><span class="obj-title">客户维度</span><span class="obj-dim">Client</span></div>
-      <div class="krs">
-        <div class="kr"><span class="kr-tag">KR1</span><span class="kr-target">个人 Leads 成交转化率 ≥ 20%</span><span class="kr-status"><span class="chip prog">进行中</span></span><span class="kr-prog">在洽 Leads 多数仍在合作洽谈中；确认流失仅 2 例（Ampace 竞标失败、TCL 实业退标）；分配 Leads 均 24h 内首轮沟通。</span></div>
-        <div class="kr"><span class="kr-tag">KR2</span><span class="kr-target">个人负责项目结算完成率 ≥ 90%</span><span class="kr-status"><span class="chip prog">进行中</span></span><span class="kr-prog">按服务期节点推进项目复盘与核销，随结算周期更新。</span></div>
-        <div class="kr"><span class="kr-tag">KR3</span><span class="kr-target">复购率（新签 3 / 老客激活 2）</span><span class="kr-status"><span class="chip prog">进行中</span></span><span class="kr-prog">持续推进存量客户非项目沟通，识别复购信号与预算周期。目前正在沟通ABOK及KNKA复购项目。</span></div>
+    <div class="okrc reveal" data-d="1">
+      <div class="okrc-head"><span class="okrc-badge">O4</span><span class="okrc-title">学习与成长</span><span class="okrc-dim">Growth</span></div>
+      <div class="okrc-cols">
+        <div class="okrc-goal"><div class="okrc-collabel">目标 · Goal</div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR1</span><span class="krdef-name">培养 2 位 Intern 并转正为 AE</span></div><ul class="krdef-subs"><li>制定 onboarding checklist 与培训计划，实习前了解背景并做基础 PR 培训</li><li>与 intern bi-weekly check-in，月度表现反馈</li></ul></div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR2</span><span class="krdef-name">独立建立并维护 ≥ 15 位核心媒体 / KOL（美东 / 美西 / 德国）</span></div><ul class="krdef-subs"><li>负责美西核心媒体 / KOL 维护，预计发展 + 维护 10 位</li><li>发展：初步建联、项目中达成合作、加私人联系</li><li>维护：每季度 re-engage 并 brief 相关客户 / 项目</li></ul></div>
+<div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR3</span><span class="krdef-name">探索传统 PR 之外的传播方式和渠道</span></div><ul class="krdef-subs"><li>探索 GEO / SEO / Marketing Tech，支撑未来 Performance / Growth PR</li><li>每年内部学习分享（组会 / 公司层面）2 次</li></ul></div>
+        </div>
+        <div class="okrc-actual"><div class="okrc-collabel">完成情况 · H1 Actual</div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip done">1 / 2</span></div><div class="actual-body">与 <b>1 位 intern</b> 协作较深入；Onboarding 与 bi-weekly check-in 机制建立中。</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip prog">进行中</span></div><div class="actual-body">与拉展参展记者及 <b>DigiTimes</b> 记者深度沟通；成功邀请 <b>DigiTimes + CleanTechnica</b> 记者参与 GCS 深圳活动。</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip done">1 / 2</span></div><div class="actual-body">已完成 <b>NotebookLM 内部分享</b>；持续探索 GEO / SEO / Marketing Tech 与 Performance / Growth PR。</div></div>
+        </div>
       </div>
     </div>
-
-    <div class="obj reveal">
-      <div class="obj-head"><span class="obj-badge">O3</span><span class="obj-title">内部业务流程</span><span class="obj-dim">Process</span></div>
-      <div class="krs">
-        <div class="kr"><span class="kr-tag">KR1</span><span class="kr-target">行业 Practice Deck 案例 × 3</span><span class="kr-status"><span class="chip done">1 / 3</span></span><span class="kr-prog">拉展（CONEXPO）案例已沉淀；道通坦桑尼亚 / 澳大利亚项目总结进行中。</span></div>
-        <div class="kr"><span class="kr-tag">KR2</span><span class="kr-target">新 Practice research / 方法论 × 2</span><span class="kr-status"><span class="chip partial">部分达成</span></span><span class="kr-prog">AI 项目突破校报 + 开发者社群传播渠道；临工项目沉淀建筑类 + 工程类行业媒体库。</span></div>
-        <div class="kr"><span class="kr-tag">KR3</span><span class="kr-target">工具 / 流程优化 ≥ 1（AI 自动化 SOP）</span><span class="kr-status"><span class="chip prog">进行中</span></span><span class="kr-prog">AI 辅助 Research 基础 SOP 成型并完成 NotebookLM 内部分享；持续探索 Research / 媒体监测自动化。</span></div>
-      </div>
-    </div>
-
-    <div class="obj reveal">
-      <div class="obj-head"><span class="obj-badge">O4</span><span class="obj-title">学习与成长</span><span class="obj-dim">Growth</span></div>
-      <div class="krs">
-        <div class="kr"><span class="kr-tag">KR1</span><span class="kr-target">培养 2 位 Intern 并转正为 AE</span><span class="kr-status"><span class="chip done">1 位</span></span><span class="kr-prog">目前与 1 位 Intern 协作较深入；Onboarding 与 bi-weekly check-in 机制建立中。</span></div>
-        <div class="kr"><span class="kr-tag">KR2</span><span class="kr-target">≥ 15 位核心媒体 / KOL 有效联系</span><span class="kr-status"><span class="chip prog">进行中</span></span><span class="kr-prog">与拉展采访记者（International Mining/Global Highways）及 DigiTimes 记者深度沟通并建联；成功邀请 DigiTimes + CleanTechnica 记者参与 GCS 深圳活动。</span></div>
-        <div class="kr"><span class="kr-tag">KR3</span><span class="kr-target">探索传统 PR 外渠道 · 内部分享 × 2</span><span class="kr-status"><span class="chip done">1 / 2</span></span><span class="kr-prog">已完成 NotebookLM 内部分享；持续探索 GEO / SEO / Marketing Tech 与 Performance / Growth PR。</span></div>
-      </div>
-    </div>
-
   </div>
 </section>
 
@@ -548,7 +659,7 @@ section{position:relative}
   <div class="wrap">
     <div class="sec-head reveal">
       <div class="sec-bar"></div>
-      <div class="sec-num">07</div>
+      <div class="sec-num">08</div>
       <div class="sec-titles">
         <span class="eyebrow">The next six months · 下半年</span>
         <h2 class="sec-title">从 Owner 到 Leader</h2>
