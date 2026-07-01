@@ -299,6 +299,13 @@ section{position:relative}
   .okrc-goal{border-right:none;border-bottom:1px solid var(--line)}
 }
 
+/* actual completion rendered as KR-style bullets */
+.actual-subs{list-style:none;margin:0;padding:0}
+.actual-subs li{position:relative;padding-left:15px;font-family:var(--cjk);font-size:.88rem;color:var(--ink-soft);line-height:1.6;margin-bottom:5px}
+.actual-subs li:last-child{margin-bottom:0}
+.actual-subs li::before{content:"";position:absolute;left:3px;top:.66em;width:4px;height:4px;border-radius:50%;background:var(--red)}
+.actual-subs li b{color:var(--ink);font-weight:600}
+
 @media print{.gauge-fill{stroke-dashoffset:0!important;transition:none!important}}
 @media(prefers-reduced-motion:reduce){.gauge-fill{stroke-dashoffset:0!important;transition:none!important}}
 
@@ -600,9 +607,9 @@ section{position:relative}
 <div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR3</span><span class="krdef-name">人效 ≥ 4（Fee / 人工成本）</span></div><ul class="krdef-subs"><li>提升 research 效率降低人力成本</li><li>科技（或某垂类）记者 / KOL 深度建联，为未来邀约 / pitch 铺垫</li></ul></div>
         </div>
         <div class="okrc-actual"><div class="okrc-collabel">完成情况 · H1 Actual</div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip prog">进行中</span></div><div class="actual-body">个人签约 Fee <b>$17,279</b>（<b>6%</b>）。</div></div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip prog">进行中</span></div><div class="actual-body">控制 Paid Article、临时外部支援与活动物料成本，推动成本内化与报价 fine-tune。</div></div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip prog">进行中</span></div><div class="actual-body">人效比待补充；积极使用 AI 工具提升个人工作效率</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip prog">进行中</span></div><ul class="actual-subs"><li>个人签约 Fee <b>$17,279</b>（<b>6%</b>）。</li></ul></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip prog">进行中</span></div><ul class="actual-subs"><li>控制 Paid Article、临时外部支援与活动物料成本，推动成本内化与报价 fine-tune。</li></ul></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip prog">进行中</span></div><ul class="actual-subs"><li>人效比待补充；积极使用 AI 工具提升个人工作效率</li></ul></div>
         </div>
       </div>
     </div>
@@ -615,9 +622,9 @@ section{position:relative}
 <div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR3</span><span class="krdef-name">复购率（当年新签 3 / 老客激活 2）</span></div><ul class="krdef-subs"><li>每季度对存量客户 ≥ 1 次非项目沟通，记录新需求 / 预算周期</li><li>每季度推进 ≥ 2 个客户复购，整理机会点并同步上级</li></ul></div>
         </div>
         <div class="okrc-actual"><div class="okrc-collabel">完成情况 · H1 Actual</div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip prog">进行中</span></div><div class="actual-body">当前 Leads 多在洽谈中；确认流失 <b>2 例</b>（Ampace 竞标失败、TCL 实业退标）；</div></div>分配 Leads 均 <b>24h</b> 内首轮沟通。转化率待 pipeline 落地结算。</div></div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip prog">进行中</span></div><div class="actual-body">按服务期节点推进项目复盘与核销单确认，随结算周期更新。</div></div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip prog">进行中</span></div><div class="actual-body">持续推进存量客户非项目沟通，识别复购信号与预算周期。</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip prog">进行中</span></div><ul class="actual-subs"><li>当前 Leads 多在洽谈中；确认流失 <b>2 例</b>（Ampace 竞标失败、TCL 实业退标）；</li><li>分配 Leads 均 <b>24h</b> 内首轮沟通。转化率待 pipeline 落地结算。</li></ul></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip prog">进行中</span></div><ul class="actual-subs"><li>按服务期节点推进项目复盘与核销单确认，随结算周期更新。</li></ul></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip prog">进行中</span></div><ul class="actual-subs"><li>持续推进存量客户非项目沟通，识别复购信号与预算周期。</li></ul></div>
         </div>
       </div>
     </div>
@@ -630,9 +637,9 @@ section{position:relative}
 <div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR3</span><span class="krdef-name">落地 ≥ 1 个工具 / 流程优化并量化节省</span></div><ul class="krdef-subs"><li>探索 Research 与媒体监测自动化、常态化（形成完整 SOP）</li><li>探索 AI Agent 提升日常效率、简化工作流程</li></ul></div>
         </div>
         <div class="okrc-actual"><div class="okrc-collabel">完成情况 · H1 Actual</div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip done">2 / 3</span></div><div class="actual-body">拉展（CONEXPO）案例<b>已沉淀</b>；</div></div> 道通坦桑尼亚项目总结进行中。</div></div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip partial">部分达成</span></div><div class="actual-body">AI 项目突破<b>校报 + 开发者社群</b>传播渠道; 并推动内部<b>AI资源交流群</b>建立；</div></div> 临工项目沉淀<b>建筑类 + 工程类</b>行业媒体库。</div></div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip prog">进行中</span></div><div class="actual-body">AI 辅助 Research 基础 SOP 成型并完成 <b>NotebookLM 内部分享</b>；</div></div>持续探索 Research / 媒体监测自动化。目前正在调试和整理 <b>客户调研总结skill</b>。</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip done">2 / 3</span></div><ul class="actual-subs"><li>拉展（CONEXPO）案例<b>已沉淀</b>；</li><li>道通坦桑尼亚项目总结进行中。</li></ul></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip partial">部分达成</span></div><ul class="actual-subs"><li>AI 项目突破<b>校报 + 开发者社群</b>传播渠道; 并推动内部<b>AI资源交流群</b>建立；</li><li>临工项目沉淀<b>建筑类 + 工程类</b>行业媒体库。</li></ul></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip prog">进行中</span></div><ul class="actual-subs"><li>AI 辅助 Research 基础 SOP 成型并完成 <b>NotebookLM 内部分享</b>；</li><li>持续探索 Research / 媒体监测自动化。目前正在调试和整理 <b>客户调研总结skill</b>。</li></ul></div>
         </div>
       </div>
     </div>
@@ -645,9 +652,9 @@ section{position:relative}
 <div class="krdef"><div class="krdef-h"><span class="krdef-tag">KR3</span><span class="krdef-name">探索传统 PR 之外的传播方式和渠道</span></div><ul class="krdef-subs"><li>探索 GEO / SEO / Marketing Tech，支撑未来 Performance / Growth PR</li><li>每年内部学习分享（组会 / 公司层面）2 次</li></ul></div>
         </div>
         <div class="okrc-actual"><div class="okrc-collabel">完成情况 · H1 Actual</div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip done">1 / 2</span></div><div class="actual-body">与 <b>1 位 intern</b> 协作较深入；Onboarding 与 bi-weekly check-in 机制建立中。</div></div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip prog">进行中</span></div><div class="actual-body">与拉展参展记者<b>International Mining、Global Highways、Equipment World</b> 及 <b>DigiTimes</b> 记者深度沟通；</div></div>成功邀请 <b>DigiTimes + CleanTechnica</b> 记者参与 GCS 深圳活动。</div></div>
-<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip done">1 / 2</span></div><div class="actual-body">已完成 <b>NotebookLM 内部分享</b>；持续探索 GEO / SEO / Marketing Tech 与 Performance / Growth PR。</div></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">1</span><span class="chip done">1 / 2</span></div><ul class="actual-subs"><li>与 <b>1 位 intern</b> 协作较深入；Onboarding 与 bi-weekly check-in 机制建立中。</li></ul></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">2</span><span class="chip prog">进行中</span></div><ul class="actual-subs"><li>与拉展参展记者<b>International Mining、Global Highways、Equipment World</b> 及 <b>DigiTimes</b> 记者深度沟通；</li><li>成功邀请 <b>DigiTimes + CleanTechnica</b> 记者参与 GCS 深圳活动。</li></ul></div>
+<div class="actual-item"><div class="actual-top"><span class="actual-num">3</span><span class="chip done">1 / 2</span></div><ul class="actual-subs"><li>已完成 <b>NotebookLM 内部分享</b>；持续探索 GEO / SEO / Marketing Tech 与 Performance / Growth PR。</li></ul></div>
         </div>
       </div>
     </div>
